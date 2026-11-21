@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="CA Inter MCQ Arena">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>Income Tax MCQ Arena · Day 1</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f4ee;--card:#fff;--ink:#1c2233;--mut:#6b7285;--line:#e3e0d6;--acc:#1f3a8a;--accbg:#e6ebfb;--on:#fff;--ok:#16a34a;--bad:#dc2626;--warn:#d97706;--okbg:#e8f7ee;--badbg:#fdecec;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151f;--card:#1b2030;--ink:#eceff7;--mut:#97a0b8;--line:#2c3347;--acc:#7c9cff;--accbg:#232c4d;--on:#0b1020;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--okbg:#16301f;--badbg:#3a1c1f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12151f;--card:#1b2030;--ink:#eceff7;--mut:#97a0b8;--line:#2c3347;--acc:#7c9cff;--accbg:#232c4d;--on:#0b1020;--ok:#4ade80;--bad:#f87171;--warn:#fbbf24;--okbg:#16301f;--badbg:#3a1c1f;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button{font:inherit}.wrap{max-width:720px;margin:0 auto;padding:16px 16px 40px}
+h1{font-size:30px;line-height:1.15;margin:8px 0}h2{font-size:18px;line-height:1.45;margin:8px 0 14px;font-weight:600}h3{margin:20px 0 8px;font-size:16px}
+.mut{color:var(--mut)}.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--acc);background:var(--accbg);padding:3px 10px;border-radius:99px}
+.grid{display:grid;gap:12px;margin:20px 0}
+.mode{text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;color:var(--ink);cursor:pointer;display:grid;gap:4px}
+.mode:hover,.mode:active{border-color:var(--acc)}.mode b{font-size:17px}.mode span{color:var(--mut);font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:12px 0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:4px 12px;font-weight:700;font-variant-numeric:tabular-nums}.pill.low{color:var(--bad);border-color:var(--bad)}
+.bar{height:6px;background:var(--line);border-radius:9px;margin:10px 0;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc);transition:width .3s}
+.pal{display:flex;flex-wrap:wrap;gap:6px}
+.dot{width:32px;height:32px;border-radius:9px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;font-size:13px;cursor:pointer;padding:0}
+.dot.ans{background:var(--acc);color:var(--on);border-color:var(--acc)}.dot.cur{outline:2px solid var(--ink);outline-offset:2px}.dot.mk{border-color:var(--warn);box-shadow:inset 0 -3px var(--warn)}
+.topic{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--acc)}
+.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;margin:8px 0;padding:12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.opt span{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);font-weight:700;font-size:13px}
+.opt.sel{border-color:var(--acc);background:var(--accbg)}.opt.sel span{background:var(--acc);color:var(--on)}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.bad{border-color:var(--bad);background:var(--badbg)}
+.exp{margin-top:12px;padding:12px;border-radius:12px;font-size:14.5px}.exp.g{background:var(--okbg)}.exp.r{background:var(--badbg)}
+.nav{display:flex;gap:8px;margin-top:8px}.pri{flex:1;background:var(--acc);color:var(--on);border:0;border-radius:12px;padding:13px;font-weight:700;cursor:pointer}
+.ghost{background:var(--card);border:1.5px solid var(--line);color:var(--ink);border-radius:12px;padding:13px 16px;cursor:pointer}button:disabled{opacity:.4}
+.hero{display:flex;align-items:center;gap:16px}.hero>div:first-child{flex:1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.st{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center}.st b{display:block;font-size:22px}.st small{color:var(--mut)}
+.row{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:14px}.row .l{width:44%}.row .tr{flex:1;height:10px;background:var(--line);border-radius:9px;overflow:hidden}.row .tr i{display:block;height:100%;border-radius:9px}
+.tl{display:flex;align-items:flex-end;gap:5px;height:110px}.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:11px;color:var(--mut)}.col .b{width:100%;border-radius:5px 5px 0 0;min-height:4px}
+.tip{padding:10px 12px;border-radius:12px;background:var(--accbg);margin:8px 0;font-size:14.5px}
+.chips{display:flex;gap:6px;margin:8px 0}.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 14px;cursor:pointer;font-size:14px}.chip.on{background:var(--acc);color:var(--on);border-color:var(--acc)}
+.rv{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:6px 0;padding:10px 12px}.rv summary{cursor:pointer;font-weight:600;font-size:14.5px}.rv p{font-size:14.5px}
+.ic{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;color:#fff;font-size:13px;margin-right:6px}.ic.r{background:var(--ok)}.ic.w{background:var(--bad)}.ic.s{background:var(--mut)}
+
+/* ===== 10/10 EXAM INTELLIGENCE LAYER ===== */
+body{background:radial-gradient(circle at top right,rgba(31,58,138,.08),transparent 35%),var(--bg)}
+.wrap{max-width:820px}
+.brandbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.brandbar .mini{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--acc);text-transform:uppercase}.brandbar .modebadge{font-size:12px;font-weight:800;border:1px solid var(--line);padding:5px 9px;border-radius:999px;background:var(--card)}
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.metric{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:10px}.metric b{display:block;font-size:20px}.metric small{color:var(--mut);font-size:11px}.mission{background:linear-gradient(135deg,var(--acc),#111827);color:#fff;border-radius:18px;padding:16px;margin:12px 0}.mission .xp{font-size:28px;font-weight:900}.mission small{opacity:.82}.confidence{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.conf{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:9px;text-align:center;cursor:pointer;font-weight:700}.conf.sel{border-color:var(--acc);background:var(--accbg)}.conf small{display:block;color:var(--mut);font-weight:500}.intel{padding:12px;border-radius:14px;border:1px solid var(--line);background:var(--card);margin:10px 0}.intel b{font-size:13px}.cal{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.cal .cell{padding:8px;border-radius:10px;background:var(--bg);border:1px solid var(--line);font-size:11px;text-align:center}.cell strong{display:block;font-size:15px}.good{color:var(--ok)}.danger{color:var(--bad)}.warn{color:var(--warn)}
+@media(max-width:560px){.dash{grid-template-columns:repeat(2,1fr)}.cal{grid-template-columns:repeat(3,1fr)}}
+</style></head><body><div class="wrap" id="app"></div>
+<script>
+const Q=[
+{t:"Slabs & Rebate",q:"Default regime: Mr. A (resident, 50) has total income of ₹12,10,000 (normal income only). His tax liability including cess for A.Y. 2026-27 is:",o:["Nil","₹10,000","₹10,400","₹63,960"],a:2,e:"Slab tax on ₹12.1 L is ₹61,500. Income exceeds ₹12 L, so the full 87A rebate is lost, but marginal relief caps tax at the excess over ₹12 L = ₹10,000. Add 4% cess → <b>₹10,400</b>."},
+{t:"Surcharge",q:"Old regime: Mr. B (45, resident) has total income of ₹1,01,00,000 (normal income only). Marginal relief from surcharge available to him is:",o:["₹30,000","₹1,75,125","₹4,26,375","₹75,125"],a:3,e:"Tax ₹28,42,500 + 15% surcharge ₹4,26,375 = ₹32,68,875. On ₹1 Cr tax + surcharge is ₹30,93,750; max payable = 30,93,750 + 1,00,000 = ₹31,93,750. Relief = <b>₹75,125</b>."},
+{t:"Surcharge",q:"Default regime: Mr. C (resident) has total income of ₹2,10,00,000 (normal income only). Surcharge payable by him is:",o:["₹14,70,000","₹8,82,000","₹5,88,000","₹21,75,600"],a:0,e:"Tax = ₹58,80,000; surcharge at 25% (the maximum under the default regime) = <b>₹14,70,000</b>. Marginal relief check: max payable ₹74,17,000 vs actual ₹73,50,000, so no relief."},
+{t:"Regime Option",q:"Mr. D (business income) opted out of the default regime for A.Y. 2025-26 and opted back into it for A.Y. 2026-27. For A.Y. 2027-28 he wants the old regime again. He:",o:["Can, with the Assessing Officer’s approval","Can, by filing Form 10-IEA by the due date","Can, by simply choosing it in his return","Cannot, unless he ceases to have business income"],a:3,e:"Proviso to s.115BAC(6): a person with business income can withdraw the option only once. The one-time re-entry was used in A.Y. 2026-27, so the default regime is compulsory until business income ceases."},
+{t:"Regime Option",q:"Mr. E has only salary income. He files his A.Y. 2026-27 return belatedly on 15.12.2026 and selects the old regime in it. His tax will be computed under:",o:["Old regime, as selected in the return","Old regime, if Form 10-IEA is filed","Default regime u/s 115BAC","Whichever regime gives lower tax"],a:2,e:"A person without business income must choose the old regime in the return filed u/s 139(1) by the due date. A belated return u/s 139(4) cannot carry that option → <b>default regime u/s 115BAC</b>."},
+{t:"Slabs & Rebate",q:"Old regime: Mr. F (40, resident) has total income computed as ₹5,00,004. His tax liability is:",o:["₹520","Nil","₹12,500","₹13,000"],a:1,e:"Round off first (s.288A, nearest ₹10) → ₹5,00,000. Tax ₹12,500 is fully wiped by the 87A rebate → <b>Nil</b>. Without rounding, rebate would be lost and tax + cess would be ₹13,000."},
+{t:"Surcharge",q:"A partnership firm has total income of ₹1,02,00,000. Its total tax liability including cess (after marginal relief) is:",o:["₹31,82,400","₹33,28,000","₹32,00,000","₹35,64,288"],a:1,e:"30% of ₹1.02 Cr = ₹30,60,000 + 12% surcharge ₹3,67,200 = ₹34,27,200. Max payable = ₹30,00,000 + ₹2,00,000 = ₹32,00,000. Add 4% cess ₹1,28,000 → <b>₹33,28,000</b>."},
+{t:"Regime Deductions",q:"Which of the following is NOT available to a salaried individual under the default regime for A.Y. 2026-27?",o:["Exemption for Leave Travel Concession u/s 10(5)","Deduction u/s 80CCD(2)","Standard deduction u/s 16(ia)","Deduction for family pension u/s 57(iia)"],a:0,e:"Default regime allows standard deduction (₹75,000), employer’s NPS u/s 80CCD(2) (up to 14%) and family pension u/s 57(iia). <b>LTC</b>, HRA and professional tax are not allowed."},
+{t:"Surcharge",q:"Old regime: Mr. G’s total income of ₹3 crore consists of salary ₹2.5 crore and dividend ₹50 lakh. Surcharge rates on tax on dividend and on tax on salary are:",o:["25% on both","15% on both","15% on dividend; 25% on salary","25% on dividend; 37% on salary"],a:2,e:"Surcharge on dividend (and 111A/112/112A income) is capped at <b>15%</b>. For salary, the rate follows total income excluding dividend (₹2.5 Cr → ₹2–5 Cr band) → <b>25%</b>."},
+{t:"Slabs & Rebate",q:"Mr. H, a resident, was born on 1st April 1966. Under the old regime, his basic exemption limit for A.Y. 2026-27 is:",o:["₹3,00,000","₹2,50,000","₹4,00,000","₹5,00,000"],a:0,e:"A person attains an age on the day before the birthday: he turns 60 on 31 Mar 2026, inside P.Y. 2025-26. He is a senior citizen → exemption limit <b>₹3,00,000</b>."},
+{t:"Regime Deductions",q:"Mr. I (resident, 35): gross salary ₹16,00,000; old-regime deductions available: 80C ₹1,50,000 and 80D ₹25,000. Tax saved (incl. cess) by staying in the default regime:",o:["₹1,13,100","₹1,20,900","₹97,500","₹2,34,000"],a:1,e:"Old: TI ₹13,75,000 → tax ₹2,25,000 + cess = ₹2,34,000. Default: TI ₹15,25,000 → ₹1,08,750 + cess = ₹1,13,100. Saved = <b>₹1,20,900</b>."},
+{t:"Special Sections",q:"Under which section may the income of a business discontinued during the year be assessed in the same assessment year itself?",o:["Section 175","Section 174","Section 172","Section 176"],a:3,e:"<b>Section 176</b> – discontinued business or profession. (172: shipping of non-residents · 174: persons leaving India · 175: transfer of property to avoid tax.)"}];
+const LIM=18*60,$=s=>document.querySelector(s),app=$("#app"),fmt=s=>Math.floor(s/60)+":"+String(Math.floor(s%60)).padStart(2,"0");
+let S={},T,H=[],D=[];try{H=JSON.parse(localStorage.getItem("d1h")||"[]")}catch(e){}
+const cur=()=>S.ord[S.p];
+function lap(){const n=Date.now();S.t[cur()]+=(n-S.qs)/1000;S.qs=n}
+function home(){clearInterval(T);S={};
+ const b=H.slice(-8),best=H.length?Math.max(...H.map(h=>h.s)):0;
+ const total=H.length,avgScore=total?Math.round(H.reduce((a,x)=>a+x.s,0)/total*10)/10:0;
+ app.innerHTML=`<div class="brandbar"><div><div class="mini">CA Inter · Direct Tax</div><b>MCQ Arena · Day 1</b></div><div class="modebadge">🔥 10/10 EDITION</div></div><h1>Basic Concepts</h1><p class="mut">12 questions · 1 mark each · P.Y. 2025-26 (A.Y. 2026-27)</p><div class="dash"><div class="metric"><b>${best}/12</b><small>Personal best</small></div><div class="metric"><b>${total}</b><small>Attempts</small></div><div class="metric"><b>${avgScore||"—"}</b><small>Avg score</small></div><div class="metric"><b>${Math.min(200,total*12)}</b><small>Mission XP</small></div></div><div class="mission"><div style="font-weight:800">🔥 200 SCORE MISSION</div><div class="xp">${Math.min(200,total*12)} / 200 XP</div><small>Build mastery, not just marks. Every clean attempt compounds.</small></div>
+ <div class="grid"><button class="mode" onclick="startFocus()"><b>🧠 Reset Focus</b><span>30-second reset: clear the noise, choose one question, restart the rhythm.</span></button><button class="mode" onclick="start('exam')"><b>⏱ Exam mode</b><span>18-minute countdown, no hints. Full review and insights at the end.</span></button>
+ <button class="mode" onclick="start('practice')"><b>🎯 Practice mode</b><span>Instant feedback and explanation after every answer, with a streak counter.</span></button></div>
+ <div class="nav"><button class="ghost" onclick="exportData()">⬇ Export</button><button class="ghost" onclick="importData()">⬆ Import</button></div>${H.length?`<div class="card"><b>Your attempts</b> <span class="mut">· best ${best}/12</span><div class="tl" style="height:80px;margin-top:10px">${b.map(h=>`<div class="col"><div class="b" style="height:${h.s/12*100}%;background:var(--acc)"></div>${h.s}</div>`).join("")}</div></div>`:""}`}
+function startFocus(){app.innerHTML=`<div class="card" style="text-align:center;margin-top:30vh"><div style="font-size:42px">🧠</div><h1 style="font-size:28px">Forget the rest.</h1><p class="mut">For the next 60 seconds, only this matters:</p><div class="mission"><div class="xp">ONE QUESTION.</div><small>No backlog. No guilt. No future. Just the next decision.</small></div><button class="pri" onclick="start('practice')">Start now →</button></div>`;scrollTo(0,0)}
+function start(m,o){clearInterval(T);S={m,ord:o||Q.map((_,i)=>i),p:0,ans:Q.map(()=>null),mark:[],t:Q.map(()=>0),t0:Date.now(),qs:Date.now(),streak:0,conf:Q.map(()=>null),changes:0};T=setInterval(tick,500);quiz();scrollTo(0,0)}
+function tick(){if(S.done)return;const e=(Date.now()-S.t0)/1000,c=$("#clk");if(S.m=="exam"){const r=LIM-e;if(r<=0)return finish();if(c){c.textContent="⏱ "+fmt(r);c.classList.toggle("low",r<120)}}else if(c)c.textContent="⏱ "+fmt(e)}
+function quiz(){const q=cur(),X=Q[q],a=S.ans[q],pr=S.m=="practice",lk=pr&&a!=null,n=S.ord.length,un=S.ord.filter(x=>S.ans[x]==null).length;
+ app.innerHTML=`<div class="brandbar"><div><div class="mini">CA Inter · Direct Tax</div><b>Day 1 · Basic Concepts</b></div><div class="modebadge">${pr?"🎯 PRACTICE":"⏱ EXAM"}</div></div>
+ <div class="top"><div class="pill" id="clk"></div><span class="mut">Q ${S.p+1} / ${n}</span>${pr?`<div class="pill">🔥 ${S.streak}</div>`:""}</div>
+ <div class="bar"><i style="width:${(S.p+1)/n*100}%"></i></div>
+ <div class="pal">${S.ord.map((x,j)=>`<button class="dot${j==S.p?" cur":""}${S.ans[x]!=null?" ans":""}${S.mark[x]?" mk":""}" onclick="go(${j})">${j+1}</button>`).join("")}</div>
+ <div class="card"><div class="topic">${X.t}</div><h2>${X.q}</h2>
+ ${!lk&&a==null?`<div class="intel"><b>🧠 Confidence check</b><div class="mut" style="font-size:12px">Choose how sure you are <i>before</i> locking the answer.</div><div class="confidence">${[["sure","🟢 Sure","I know it"],["half","🟡 50–50","Need elimination"],["guess","🔴 Guess","Low confidence"]].map(([k,l,d])=>`<button class="conf${S.conf[q]==k?" sel":""}" onclick="setConf('${k}')">${l}<small>${d}</small></button>`).join("")}</div></div>`:""}
+ ${X.o.map((o,k)=>{let c="opt";if(lk){if(k==X.a)c+=" ok";else if(k==a)c+=" bad"}else if(k==a)c+=" sel";return`<button class="${c}" onclick="pick(${k})"><span>${"abcd"[k]}</span>${o}</button>`}).join("")}
+ ${lk?`<div class="exp ${a==X.a?"g":"r"}"><b>${a==X.a?"Correct! ":"Not quite. "}</b>${X.e}</div>`:""}</div>
+ <div class="nav"><button class="ghost" onclick="go(S.p-1)" ${S.p?"":"disabled"}>←</button>${pr?"":`<button class="ghost" onclick="S.mark[cur()]=!S.mark[cur()];quiz()">${S.mark[q]?"★ Marked":"☆ Mark"}</button>`}
+ ${S.p<n-1?`<button class="pri" onclick="go(S.p+1)">Next →</button>`:`<button class="pri" onclick="finish()">Submit${un?` (${un} blank)`:""} ✓</button>`}</div>`;tick()}
+function setConf(k){S.conf[cur()]=k;quiz()}
+function pick(k){const q=cur();if(S.m=="practice"){if(S.ans[q]!=null)return;S.streak=k==Q[q].a?S.streak+1:0}else if(S.conf[q]==null){return}if(S.ans[q]!=null&&S.ans[q]!==k)S.changes++;S.ans[q]=k;quiz()}
+function go(p){if(p<0||p>=S.ord.length)return;lap();S.p=p;quiz();scrollTo(0,0)}
+onkeydown=e=>{if(!S.ord||S.done)return;const k="abcd1234".indexOf(e.key.toLowerCase());if(k>=0)pick(k%4);else if(e.key=="ArrowRight")go(S.p+1);else if(e.key=="ArrowLeft")go(S.p-1)};
+function finish(){if(S.done)return;lap();S.done=true;clearInterval(T);const n=S.ord.length,r=S.ord.filter(q=>S.ans[q]===Q[q].a).length;
+ S.prev=H.length?Math.max(...H.map(h=>h.s)):-1;
+ if(n==12){H.push({s:r,n,m:S.m});H=H.slice(-20);try{localStorage.setItem("d1h",JSON.stringify(H))}catch(e){}}result()}
+function result(){const o=S.ord,n=o.length,st=q=>S.ans[q]==null?"s":S.ans[q]===Q[q].a?"r":"w",
+ R=o.filter(q=>st(q)=="r").length,W=o.filter(q=>st(q)=="w").length,K=n-R-W,tt=o.reduce((a,q)=>a+S.t[q],0),avg=tt/n,pc=R/n,C=2*Math.PI*52,
+ rank=pc==1?"Tax Maestro 🏆":pc>=.75?"Surcharge Slayer ⚔️":pc>=.5?"Slab Climber 📈":"Rookie on the rise 🌱",
+ col=s=>s=="r"?"var(--ok)":s=="w"?"var(--bad)":"var(--line)",TP={};
+ o.forEach(q=>{const t=Q[q].t;TP[t]=TP[t]||{t,r:0,n:0};TP[t].n++;if(st(q)=="r")TP[t].r++});
+ const tp=Object.values(TP).sort((a,b)=>a.r/a.n-b.r/b.n),mx=Math.max(...o.map(q=>S.t[q]),1),slow=o.reduce((a,q)=>S.t[q]>S.t[a]?q:a,o[0]),fw=o.filter(q=>st(q)=="w"&&S.t[q]<20).length,tips=[];
+ tips.push(tp[0].r<tp[0].n?`🎯 Weakest area: <b>${tp[0].t}</b> (${tp[0].r}/${tp[0].n}). Revisit this concept first.`:"🌟 Every topic is spot on. You’re ready for Day 2.");
+ tips.push(`🐢 Slowest on <b>Q${slow+1}</b> (${fmt(S.t[slow])}). Average pace: ${Math.round(avg)}s per question.`);
+ if(fw)tips.push(`⚡ ${fw} wrong answer${fw>1?"s":""} in under 20s. Write the working on computation questions instead of guessing.`);
+ if(K)tips.push(`⏭ ${K} unanswered. The paper says to attempt all questions.`);
+ if(n==12)tips.push(S.prev<0?"📌 First attempt saved. Retake later to track progress.":R>S.prev?`🎉 New personal best (previous ${S.prev}/12)!`:`📈 Personal best is ${Math.max(S.prev,R)}/12.`);
+ const sure= o.filter(q=>S.conf[q]=="sure"), half=o.filter(q=>S.conf[q]=="half"), guess=o.filter(q=>S.conf[q]=="guess");
+ const calCorrect=x=>x.filter(q=>S.ans[q]===Q[q].a).length, calibration= n?Math.round(((calCorrect(sure)/Math.max(sure.length,1))*100)):0;
+ const xp=R*10+Math.max(0,guess.length-calCorrect(guess))*4+(K==0?20:0)+(S.changes==0?10:0);
+ const action=tp[0].r<tp[0].n?`🎯 <b>Next move:</b> revise <b>${tp[0].t}</b> before doing a fresh set.`:R==n?`🔥 <b>Perfect run.</b> Move to Day 2 or increase difficulty.`:`📈 <b>Next move:</b> retry the missed questions without looking at explanations.`;
+ app.innerHTML=`<span class="tag">Result · ${S.m=="exam"?"Exam":"Practice"} mode</span>
+ <div class="hero"><svg viewBox="0 0 120 120" width="130" height="130"><circle cx="60" cy="60" r="52" fill="none" stroke="var(--line)" stroke-width="10"/><circle id="rg" cx="60" cy="60" r="52" fill="none" stroke="${pc>=.5?"var(--ok)":"var(--warn)"}" stroke-width="10" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C}" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset 1s ease"/><text x="60" y="62" text-anchor="middle" font-size="26" font-weight="700" fill="var(--ink)">${R}/${n}</text><text x="60" y="82" text-anchor="middle" font-size="12" fill="var(--mut)">${Math.round(pc*100)}%</text></svg>
+ <div><h1 style="font-size:24px">${rank}</h1><div class="mut">⏱ ${fmt(tt)} total</div></div></div>
+ <div class="mission"><div style="font-weight:800">🔥 GROUP 1 · 200 SCORE MISSION</div><div class="xp">+${xp} XP</div><small>Accuracy is only one part. Confidence calibration + clean decisions + completion all count.</small></div>
+ <div class="stats"><div class="st"><b style="color:var(--ok)">${R}</b><small>Correct</small></div><div class="st"><b style="color:var(--bad)">${W}</b><small>Wrong</small></div><div class="st"><b>${K}</b><small>Skipped</small></div></div>
+ ${tips.map(t=>`<div class="tip">${t}</div>`).join("")}
+ <div class="intel"><b>🧠 Exam Intelligence</b><div class="row"><span class="l">Sure answers</span><div class="tr"><i style="width:${sure.length/n*100}%;background:var(--ok)"></i></div><b>${sure.length}</b></div><div class="row"><span class="l">50–50</span><div class="tr"><i style="width:${half.length/n*100}%;background:var(--warn)"></i></div><b>${half.length}</b></div><div class="row"><span class="l">Guesses</span><div class="tr"><i style="width:${guess.length/n*100}%;background:var(--bad)"></i></div><b>${guess.length}</b></div><p style="margin:8px 0 0;font-size:13px">${sure.length?`You were confident on ${Math.round(sure.length/n*100)}% of questions; ${calCorrect(sure)}/${sure.length} of those were correct.`:"Confidence data will appear after you use the confidence check."}</p></div><div class="tip">${action}</div>
+ <h3>Topic mastery</h3><div class="card">${tp.map(x=>`<div class="row"><span class="l">${x.t}</span><div class="tr"><i style="width:${x.r/x.n*100}%;background:${x.r/x.n>=.75?"var(--ok)":x.r/x.n>=.5?"var(--warn)":"var(--bad)"}"></i></div><b>${x.r}/${x.n}</b></div>`).join("")}</div>
+ <h3>Time per question</h3><div class="card"><div class="tl">${o.map(q=>`<div class="col"><div class="b" style="height:${S.t[q]/mx*88}%;background:${col(st(q))}"></div>${q+1}</div>`).join("")}</div><small class="mut">Green = correct · Red = wrong · Grey = skipped</small></div>
+ <h3>Review</h3><div class="chips">${[["a","All"],["w","Wrong"],["s","Skipped"],["r","Right"]].map(([k,l])=>`<button class="chip${k=="a"?" on":""}" data-f="${k}" onclick="flt('${k}')">${l}</button>`).join("")}</div>
+ ${o.map(q=>{const s=st(q);return`<details class="rv" data-s="${s}" ${s=="w"?"open":""}><summary><span class="ic ${s}">${s=="r"?"✓":s=="w"?"✗":"–"}</span>Q${q+1} · ${Q[q].t} <small class="mut">${Math.round(S.t[q])}s</small></summary><p>${Q[q].q}</p><p>Your answer: <b>${S.ans[q]==null?"Skipped":"abcd"[S.ans[q]]+") "+Q[q].o[S.ans[q]]}</b><br>Correct: <b>${"abcd"[Q[q].a]+") "+Q[q].o[Q[q].a]}</b></p><div class="exp g">${Q[q].e}</div></details>`}).join("")}
+ <div class="nav" style="flex-wrap:wrap;margin-top:16px">${W+K?`<button class="pri" onclick="start('practice',[${o.filter(q=>st(q)!="r")}])">Retry ${W+K} missed ↻</button>`:""}<button class="ghost" onclick="start('${S.m}')">Retake all</button><button class="ghost" onclick="home()">Home</button></div>`;
+ scrollTo(0,0);setTimeout(()=>{const g=$("#rg");if(g)g.style.strokeDashoffset=C*(1-pc)},60)}
+function flt(s){document.querySelectorAll(".rv").forEach(d=>d.hidden=s!="a"&&d.dataset.s!=s);document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c.dataset.f==s))}
+function exportData(){const blob=new Blob([JSON.stringify({history:H,version:2},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="CA_Inter_Day1_MCQ_Arena_backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+function importData(){const i=document.createElement("input");i.type="file";i.accept="application/json";i.onchange=()=>{const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(Array.isArray(x.history)){H=x.history.slice(-50);localStorage.setItem("d1h",JSON.stringify(H));home()}}catch(e){alert("Invalid backup")}};r.readAsText(f)};i.click()}
+home();
+
+// PWA: offline support + install prompt
+let deferredInstallPrompt = null;
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault(); deferredInstallPrompt = e;
+  const b=document.getElementById("installPwaBtn"); if(b) b.hidden=false;
+});
+window.addEventListener("appinstalled", () => { deferredInstallPrompt=null; const b=document.getElementById("installPwaBtn"); if(b) b.hidden=true; });
+async function installPWA(){
+  if(!deferredInstallPrompt){ alert("Install is available from your browser menu when this page is opened over HTTPS."); return; }
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice; deferredInstallPrompt=null;
+  const b=document.getElementById("installPwaBtn"); if(b) b.hidden=true;
+}
+if("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").catch(()=>{}); }
+</script><button id="installPwaBtn" hidden onclick="installPWA()" style="position:fixed;right:14px;bottom:14px;z-index:9999;border:0;border-radius:999px;padding:12px 16px;font-weight:800;background:#111827;color:#fff;box-shadow:0 8px 30px rgba(0,0,0,.18)">📲 Install App</button>
+</body></html>
